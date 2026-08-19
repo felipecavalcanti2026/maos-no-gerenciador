@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Plano de mentoria individual em trafego pago (Meta Ads) — do zero ao primeiro cliente pagante em 12 semanas. Documento de trabalho.">
+<meta name="theme-color" content="#0A0D0F">
+<title>Mãos no Gerenciador — Plano de Mentoria em Tráfego Pago</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+:root{
+  /* paleta do produto: grafite operacional + ambar (dinheiro/execucao) + aco (dado/analise) */
+  --ink:#0F1316; --panel:#1A2128; --panel2:#222B33;
+  --cream:#F7F5F1; --white:#ffffff;
+  --am:#B4661C; --am-l:#F0A65A;          /* ambar: primario */
+  --st:#2C6670; --st-l:#6DBCC6;          /* aco/teal: secundario */
+  --ink-soft:#38444C; --mut:#94A3AB; --mut2:#6B7A83;
+  --line-dark:rgba(255,255,255,.11); --line-light:rgba(15,19,22,.13);
+  --display:'Fraunces',Georgia,serif;
+  --body:'Inter',-apple-system,sans-serif;
+}
+
+
+.slide{
+  width:1280px; height:720px; position:relative; overflow:hidden;
+  background:var(--cream); color:var(--ink); page-break-after:always; break-after:page;
+  padding:44px 64px 46px; display:flex; flex-direction:column;
+  --acc:var(--am); --acc2:var(--st);
+  --txt:var(--ink); --txt-hi:var(--ink); --txt-soft:var(--ink-soft);
+  --surface:var(--white); --line:var(--line-light); --mutd:var(--mut2);
+}
+.slide:last-child{ page-break-after:auto; }
+@media screen{ .slide{ margin:0 auto 26px; box-shadow:0 14px 50px rgba(0,0,0,.5); } }
+
+.slide.dark, .slide.panel{
+  color:var(--cream);
+  --acc:var(--am-l); --acc2:var(--st-l);
+  --txt:var(--cream); --txt-hi:var(--white); --txt-soft:#BAC5CB;
+  --surface:var(--panel2); --line:var(--line-dark); --mutd:var(--mut);
+}
+.slide.dark{ background:var(--ink); }
+.slide.panel{ background:var(--panel); }
+
+h1,h2,h3,h4,h5{ font-family:var(--display); font-weight:600; letter-spacing:-.008em; line-height:1.08; }
+em.s{ font-style:italic; font-weight:500; }
+.gd{ color:var(--acc); } .nu{ color:var(--acc2); }
+
+.s-head{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; }
+.tag{ font-family:var(--body); font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--acc); display:flex; align-items:center; gap:9px; }
+.tag::before{ content:''; width:22px; height:2px; background:var(--acc); display:block; }
+.num{ font-family:var(--body); font-size:11px; font-weight:600; letter-spacing:.16em; color:var(--mutd); }
+.foot{ position:absolute; left:64px; right:64px; bottom:20px; display:flex; justify-content:space-between;
+  align-items:center; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--mutd);
+  border-top:1px solid var(--line); padding-top:11px; font-weight:500; }
+
+h2.t{ font-size:50px; margin-bottom:10px; color:var(--txt-hi); }
+h2.t.sm{ font-size:40px; }
+.lead{ font-size:15px; line-height:1.6; color:var(--txt-soft); max-width:980px; font-weight:400; }
+.lead strong{ font-weight:600; color:var(--txt-hi); }
+.rule{ width:56px; height:2px; background:var(--acc); margin:13px 0 16px; }
+.body-wrap{ flex:1; display:flex; flex-direction:column; min-height:0; }
+
+.cover{ justify-content:center; padding:0 90px; }
+.cover .kick{ font-family:var(--body); font-size:11px; font-weight:600; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--acc2); margin-bottom:26px; }
+.cover h1{ font-size:86px; line-height:.98; color:var(--white); margin-bottom:22px; letter-spacing:-.02em; }
+.cover h1 em.s{ color:var(--acc); }
+.cover .sub{ font-size:16px; line-height:1.58; color:#BAC5CB; max-width:900px; font-weight:400; }
+.cover .meta{ display:flex; gap:46px; margin-top:36px; padding-top:24px; border-top:1px solid var(--line-dark); }
+.cover .meta div span{ display:block; font-family:var(--body); font-size:9.5px; font-weight:600; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--mut2); margin-bottom:7px; }
+.cover .meta div strong{ font-size:13px; color:var(--cream); font-weight:500; }
+
+.slide.sec{ justify-content:center; }
+.sec .st{ font-family:var(--body); font-size:11px; font-weight:700; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--acc2); margin-bottom:22px; }
+.sec h2{ font-size:74px; line-height:1; color:var(--txt-hi); margin-bottom:18px; letter-spacing:-.022em; }
+.sec h2 em.s{ color:var(--acc); }
+.sec .sl{ font-size:15.5px; line-height:1.62; color:var(--txt-soft); max-width:800px; }
+.sec .sm2{ margin-top:32px; padding-top:20px; border-top:1px solid var(--line); font-size:10.5px;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--mutd); font-weight:600; }
+
+.g2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.g3{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.g4{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.gr{ flex:1 1 0; min-height:0; }
+.gr2{ flex:2 1 0; min-height:0; }
+.gr > .box, .gr > .flow-s, .gr > .stat, .gr2 > .box{ display:flex; flex-direction:column; justify-content:center; }
+.gr > .card, .gr2 > .card{ display:flex; flex-direction:column; justify-content:center; }
+.gr > .fase-c{ display:flex; flex-direction:column; justify-content:flex-start; }
+.g4.gr > .card{ justify-content:flex-start; }
+.chk.gr, .idx.gr{ align-content:space-between; }
+.steps.gr{ justify-content:space-between; }
+.gr > .spread{ display:flex; flex-direction:column; justify-content:space-between; }
+
+.card{ background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:17px 17px 18px; }
+.card .ct{ font-family:var(--body); font-size:10px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--acc); margin-bottom:10px; }
+.card h4{ font-size:21px; font-weight:600; margin-bottom:8px; color:var(--txt-hi); line-height:1.12; }
+.card p{ font-size:12.5px; line-height:1.55; color:var(--txt-soft); }
+.card p b{ color:var(--txt-hi); font-weight:600; }
+.card p + p{ margin-top:7px; }
+.card ul{ list-style:none; margin-top:9px; }
+.card ul li{ font-size:12px; line-height:1.48; color:var(--txt-soft); padding-left:14px; position:relative; margin-bottom:6px; }
+.card ul li::before{ content:''; position:absolute; left:0; top:6px; width:5px; height:5px; border-radius:50%; background:var(--acc); }
+.card ul li b{ color:var(--txt-hi); font-weight:600; }
+.card.nu2 .ct{ color:var(--acc2); } .card.nu2 ul li::before{ background:var(--acc2); }
+.card.hi{ background:var(--ink); border-color:transparent; --txt-hi:var(--white); --txt-soft:#BAC5CB; --acc:var(--am-l); }
+.card.amb{ background:var(--am); border-color:transparent; --txt-hi:#fff; --txt-soft:rgba(255,255,255,.93); }
+.card.amb .ct{ color:rgba(255,255,255,.74); }
+.card.amb ul li::before{ background:rgba(255,255,255,.8); }
+.card.aco{ background:var(--st); border-color:transparent; --txt-hi:#fff; --txt-soft:rgba(255,255,255,.93); }
+.card.aco .ct{ color:rgba(255,255,255,.74); }
+.card.aco ul li::before{ background:rgba(255,255,255,.8); }
+.dense .card{ padding:14px 14px 15px; }
+.dense .card h4{ font-size:18px; margin-bottom:6px; }
+.dense .card p{ font-size:11.6px; line-height:1.46; }
+.dense .card .ct{ margin-bottom:8px; }
+.dense .card ul li{ font-size:11.2px; line-height:1.4; margin-bottom:5px; }
+
+.pill{ display:inline-block; font-family:var(--body); font-size:9.5px; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; padding:5px 11px; border-radius:99px; background:rgba(180,102,28,.12); color:var(--acc); }
+.slide.dark .pill, .slide.panel .pill{ background:rgba(240,166,90,.14); }
+
+.stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.stat{ background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 18px 20px; }
+.stat .k{ font-family:var(--body); font-size:9.5px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--mutd); margin-bottom:9px; }
+.stat .v{ font-family:var(--display); font-size:46px; font-weight:600; color:var(--acc); line-height:1;
+  letter-spacing:-.025em; margin-bottom:10px; }
+.stat p{ font-size:11.8px; line-height:1.5; color:var(--txt-soft); }
+.stat p b{ color:var(--txt-hi); font-weight:600; }
+.stat.aco{ background:var(--st); border-color:transparent; --txt-soft:rgba(255,255,255,.92); }
+.stat.aco .v{ color:#fff; } .stat.aco .k{ color:rgba(255,255,255,.7); }
+.stat.aco p b{ color:#fff; }
+
+.flow{ display:flex; align-items:stretch; gap:0; }
+.flow-s{ flex:1; background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:14px 14px 16px; position:relative; }
+.flow-s b{ display:block; font-family:var(--body); font-size:9.5px; font-weight:700;
+  letter-spacing:.16em; color:var(--acc); margin-bottom:7px; }
+.flow-s h5{ font-size:17px; font-weight:600; margin-bottom:5px; color:var(--txt-hi); line-height:1.14; }
+.flow-s p{ font-size:11px; line-height:1.46; color:var(--txt-soft); }
+.arw{ flex:none; width:22px; display:flex; align-items:center; justify-content:center;
+  font-size:14px; color:var(--acc); font-weight:700; }
+
+table{ width:100%; border-collapse:collapse; font-size:11.5px; }
+th{ font-family:var(--body); font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  text-align:left; padding:9px 10px; color:var(--acc); border-bottom:1.5px solid var(--acc); white-space:nowrap; }
+td{ padding:8.5px 10px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.42; color:var(--txt-soft); }
+td b{ color:var(--txt-hi); font-weight:600; }
+td.hd{ font-family:var(--body); font-weight:700; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--mutd); white-space:nowrap; }
+table.tight td{ padding:5.6px 8px; font-size:10.8px; line-height:1.38; }
+table.tight th{ padding:6px 8px; font-size:8.5px; }
+
+.big{ font-family:var(--display); font-size:50px; font-weight:600; line-height:1.1; letter-spacing:-.016em; color:var(--txt-hi); }
+.big em.s{ color:var(--acc); }
+.big.sm{ font-size:40px; }
+
+.split{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.box{ border:1px solid var(--line); border-radius:12px; padding:18px; }
+.box.ok{ border-color:rgba(180,102,28,.4); background:rgba(180,102,28,.055); }
+.box.no{ border-color:rgba(44,102,112,.4); background:rgba(44,102,112,.055); }
+.slide.dark .box.ok, .slide.panel .box.ok{ border-color:rgba(240,166,90,.34); background:rgba(240,166,90,.06); }
+.slide.dark .box.no, .slide.panel .box.no{ border-color:rgba(109,188,198,.3); background:rgba(109,188,198,.06); }
+.box h4{ font-size:19px; margin-bottom:11px; display:flex; align-items:center; gap:9px; color:var(--txt-hi); }
+.box.ok h4{ color:var(--am); } .box.no h4{ color:var(--st); }
+.slide.dark .box.ok h4, .slide.panel .box.ok h4{ color:var(--am-l); }
+.slide.dark .box.no h4, .slide.panel .box.no h4{ color:var(--st-l); }
+.box li{ font-size:12px; line-height:1.52; color:var(--txt-soft); padding-left:16px; position:relative;
+  margin-bottom:8px; list-style:none; }
+.box li b{ color:var(--txt-hi); font-weight:600; }
+.box.ok li::before{ content:'✓'; position:absolute; left:0; color:var(--am); font-weight:700; font-size:11px; }
+.box.no li::before{ content:'✕'; position:absolute; left:0; color:var(--st); font-weight:700; font-size:11px; }
+.slide.dark .box.ok li::before, .slide.panel .box.ok li::before{ color:var(--am-l); }
+.slide.dark .box.no li::before, .slide.panel .box.no li::before{ color:var(--st-l); }
+
+.note{ margin-top:auto; padding:11px 16px; background:rgba(180,102,28,.085); border-left:3px solid var(--acc);
+  border-radius:0 8px 8px 0; font-size:12.5px; line-height:1.54; color:var(--txt-soft); }
+.slide.dark .note, .slide.panel .note{ background:rgba(240,166,90,.09); }
+.note b{ color:var(--acc); font-weight:600; }
+.note.nu2{ background:rgba(44,102,112,.09); border-left-color:var(--acc2); }
+.slide.dark .note.nu2, .slide.panel .note.nu2{ background:rgba(109,188,198,.09); }
+.note.nu2 b{ color:var(--acc2); }
+.note.tight{ padding:9px 14px; font-size:11.6px; line-height:1.48; }
+
+.idx{ display:grid; grid-template-columns:1fr 1fr; gap:0 60px; margin-top:4px; }
+.idx-i{ display:flex; gap:16px; padding:10px 0; border-bottom:1px solid var(--line); align-items:baseline; }
+.idx-i b{ font-family:var(--body); font-size:11px; font-weight:700; color:var(--acc); letter-spacing:.1em; width:24px; flex:none; }
+.idx-i span{ font-family:var(--display); font-size:17px; font-weight:600; color:var(--txt-hi); }
+.idx-i i{ font-style:normal; font-size:10.5px; color:var(--mutd); margin-left:auto; text-align:right; }
+
+.chk{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:11px 20px; margin-top:6px; }
+.chk-i{ display:flex; gap:11px; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--line); }
+.chk-i b{ font-family:var(--body); font-size:11px; font-weight:700; color:var(--acc);
+  width:18px; flex:none; font-variant-numeric:tabular-nums; }
+.chk-i span{ font-size:12px; line-height:1.44; color:var(--txt-soft); }
+.chk-i span i{ font-style:normal; color:var(--txt-hi); font-weight:600; }
+
+.steps{ display:flex; flex-direction:column; gap:9px; }
+.step{ display:flex; gap:14px; align-items:flex-start; background:var(--surface); border:1px solid var(--line);
+  border-radius:10px; padding:12px 15px; }
+.step b{ font-family:var(--display); font-size:22px; font-weight:600; color:var(--acc); line-height:1;
+  width:24px; flex:none; }
+.step div h5{ font-size:15px; font-weight:600; color:var(--txt-hi); margin-bottom:3px; }
+.step div p{ font-size:11.8px; line-height:1.48; color:var(--txt-soft); }
+.step div p b{ font-family:var(--body); font-size:11.8px; color:var(--txt-hi); font-weight:600; width:auto; }
+
+.fase{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.fase-c{ background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 16px 17px;
+  display:flex; flex-direction:column; }
+.fase-c .fh{ font-family:var(--body); font-size:9.5px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--acc); margin-bottom:6px; }
+.fase-c h4{ font-size:20px; margin-bottom:10px; color:var(--txt-hi); }
+.fase-c li{ list-style:none; font-size:11.5px; line-height:1.45; color:var(--txt-soft);
+  padding-left:14px; position:relative; margin-bottom:7px; }
+.fase-c li::before{ content:''; position:absolute; left:0; top:6px; width:5px; height:5px;
+  border-radius:50%; background:var(--acc); }
+.fase-c li b{ color:var(--txt-hi); font-weight:600; }
+.fase-c .fend{ margin-top:auto; padding-top:11px; border-top:1px solid var(--line); font-size:11px;
+  line-height:1.46; color:var(--txt-soft); }
+.fase-c .fend b{ color:var(--acc); font-weight:700; letter-spacing:.04em; }
+
+/* escada de autonomia */
+.lad{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; align-items:end; }
+.lad-c{ background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:15px 15px 16px;
+  display:flex; flex-direction:column; }
+.lad-c .lv{ font-family:var(--body); font-size:9.5px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--mutd); margin-bottom:7px; }
+.lad-c h4{ font-size:23px; margin-bottom:8px; color:var(--txt-hi); }
+.lad-c p{ font-size:11.6px; line-height:1.5; color:var(--txt-soft); }
+.lad-c p b{ color:var(--txt-hi); font-weight:600; }
+.lad-c .wk{ margin-top:auto; padding-top:12px; border-top:1px solid var(--line);
+  font-family:var(--body); font-size:10px; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--acc); }
+.lad-c .du{ margin-top:12px; display:flex; flex-direction:column; gap:9px; }
+.lad-c .du div{ font-size:11.2px; line-height:1.45; color:var(--txt-soft); }
+.lad-c .du div i{ display:block; font-style:normal; font-family:var(--body); font-size:8.8px; font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--acc); margin-bottom:3px; }
+.lad-c.h4x .du div i{ color:rgba(255,255,255,.78); }
+.lad-c.h1x{ min-height:248px; } .lad-c.h2x{ min-height:302px; }
+.lad-c.h3x{ min-height:356px; } .lad-c.h4x{ min-height:410px; background:var(--am); border-color:transparent;
+  --txt-hi:#fff; --txt-soft:rgba(255,255,255,.93); }
+.lad-c.h4x .lv{ color:rgba(255,255,255,.72); } .lad-c.h4x .wk{ color:#fff; border-top-color:rgba(255,255,255,.28); }
+
+/* densidades de tabela — preenchem o slide sem buraco vertical */
+table.roomy1 td{ padding:14.5px 10px; font-size:12px; line-height:1.46; }
+table.roomy1 th{ padding:10px 10px; font-size:9px; }
+table.roomy2 td{ padding:12.4px 10px; font-size:12px; line-height:1.45; }
+table.roomy4 td{ padding:11.4px 10px; font-size:12px; line-height:1.45; }
+table.roomy4 th{ padding:10px 10px; font-size:9px; }
+.steps.sq .step{ padding:9px 15px; }
+.steps.sq .step div h5{ font-size:14.4px; }
+.steps.sq .step div p{ font-size:11.4px; line-height:1.44; }
+table.roomy2 th{ padding:11px 10px; font-size:9px; }
+table.roomy3 td{ padding:9.8px 9px; font-size:11.6px; line-height:1.42; }
+table.roomy3 th{ padding:8px 9px; font-size:9px; }
+
+
+/* Shell web — envolve os slides 1280x720 sem alterar o design.
+   Paleta do produto: grafite #0A0D0F / ambar #F0A65A / aco #6DBCC6 / creme #F7F5F1.
+   Mundo visual unico (escuro) porque os slides alternam claro e escuro por desenho editorial. */
+:root{ --sc:1; --shell-bg:#0A0D0F; --shell-line:rgba(255,255,255,.10); }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *{ transition:none!important; } }
+body{ font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:var(--shell-bg);
+  color:#F7F5F1; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+
+.rail{ position:sticky; top:0; z-index:60; background:rgba(10,13,15,.88);
+  backdrop-filter:blur(14px) saturate(1.25); -webkit-backdrop-filter:blur(14px) saturate(1.25);
+  border-bottom:1px solid var(--shell-line); }
+.rail-in{ max-width:1280px; margin:0 auto; padding:0 22px; height:56px; display:flex; align-items:center; gap:22px; }
+.mark{ font-family:'Fraunces',Georgia,serif; font-size:19px; font-weight:600; letter-spacing:.01em;
+  color:#F7F5F1; white-space:nowrap; }
+.mark em{ font-style:italic; color:#F0A65A; }
+.rail nav{ display:flex; gap:4px; margin-left:auto; }
+.rail a{ font-family:'Inter',sans-serif; font-size:11px; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; color:#94A3AB; text-decoration:none; padding:7px 12px; border-radius:99px;
+  transition:color .18s, background .18s; white-space:nowrap; }
+.rail a:hover, .rail a:focus-visible{ color:#F7F5F1; background:rgba(255,255,255,.07); outline:none; }
+.rail a:focus-visible{ box-shadow:0 0 0 2px #B4661C; }
+.prog{ position:absolute; left:0; bottom:-1px; height:2px; background:#F0A65A; width:0; }
+
+.hero{ max-width:1280px; margin:0 auto; padding:84px 22px 60px; }
+.eyebrow{ font-family:'Inter',sans-serif; font-size:10.5px; font-weight:700; letter-spacing:.26em;
+  text-transform:uppercase; color:#6DBCC6; margin-bottom:26px; }
+.hero h1{ font-family:'Fraunces',Georgia,serif; font-weight:600; letter-spacing:-.022em; line-height:1.0;
+  font-size:clamp(44px,8vw,96px); text-wrap:balance; margin-bottom:24px; color:#fff; }
+.hero h1 em{ font-style:italic; color:#F0A65A; }
+.hero p{ font-size:clamp(15px,1.9vw,18px); line-height:1.62; color:#BAC5CB; max-width:64ch; }
+.hero-meta{ display:flex; flex-wrap:wrap; gap:14px 44px; margin-top:42px; padding-top:26px;
+  border-top:1px solid var(--shell-line); }
+.hero-meta div span{ display:block; font-family:'Inter',sans-serif; font-size:9.5px; letter-spacing:.18em;
+  text-transform:uppercase; color:#6B7A83; margin-bottom:7px; }
+.hero-meta div strong{ font-size:14px; font-weight:500; color:#F7F5F1; }
+
+.deck{ max-width:1280px; margin:0 auto; padding:0 22px 30px; }
+.stage{ width:100%; }
+.wrap{ width:100%; height:calc(720px * var(--sc)); margin-bottom:calc(20px * var(--sc) + 6px); position:relative; }
+.deck .slide{ color:var(--ink); transform:scale(var(--sc)); transform-origin:top left;
+  margin:0 !important; border-radius:calc(10px / var(--sc)); box-shadow:0 12px 40px rgba(0,0,0,.5); }
+.deck .slide.dark, .deck .slide.panel{ color:var(--cream); }
+.wrap .sn{ position:absolute; right:0; bottom:-19px; font-family:'Inter',sans-serif;
+  font-size:9.5px; letter-spacing:.16em; color:#4E5A5F; font-variant-numeric:tabular-nums; }
+
+.foot-web{ max-width:1280px; margin:0 auto; padding:44px 22px 70px; border-top:1px solid var(--shell-line);
+  display:flex; flex-wrap:wrap; gap:16px 40px; align-items:baseline; }
+.foot-web p{ font-size:12.5px; color:#6B7A83; line-height:1.6; }
+.foot-web p b{ color:#BAC5CB; font-weight:600; }
+.top{ margin-left:auto; font-family:'Inter',sans-serif; font-size:10.5px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:#94A3AB; text-decoration:none;
+  border:1px solid var(--shell-line); padding:9px 16px; border-radius:99px; transition:.18s; }
+.top:hover, .top:focus-visible{ color:#F7F5F1; border-color:#B4661C; outline:none; }
+
+@media print{
+  @page{ size:1280px 720px; margin:0; }
+  .rail, .hero, .foot-web, .wrap .sn{ display:none !important; }
+  .deck{ max-width:none; padding:0; }
+  .wrap{ height:auto; margin:0; }
+  .deck .slide{ transform:none !important; border-radius:0; box-shadow:none;
+    page-break-after:always; break-after:page; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="rail">
+  <div class="rail-in">
+    <div class="mark">Mãos no <em>Gerenciador</em></div>
+    <nav><a href="#doc">Ver o plano</a></nav>
+  </div>
+  <div class="prog"></div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">Mentoria individual · Meta Ads · 12 semanas · 2026</div>
+    <h1>Mãos no <em>gerenciador</em>.</h1>
+    <p>Um plano de 12 semanas que começa com você sem nenhuma conta criada e termina com você rodando
+    campanha com dinheiro real, lendo o que os números estão dizendo e cobrando por isso. Não é um curso
+    que você assiste. É uma operação que você conduz — comigo dentro dela.</p>
+    <div class="hero-meta">
+      <div><span>Formato</span><strong>Mentoria 1 a 1 · 12 semanas</strong></div>
+      <div><span>Ponto de partida</span><strong>Zero. Sem conta, sem cliente</strong></div>
+      <div><span>Destino</span><strong>Operar sozinho e ser pago</strong></div>
+      <div><span>Conduzido por</span><strong>Felipe Cavalcanti</strong></div>
+      <div><span>Extensão</span><strong>24 slides</strong></div>
+    </div>
+  </section>
+  <div class="deck" id="doc"><div class="stage">
+<div class="wrap"><section class="slide dark cover">
+  <div class="kick">Mentoria individual · Meta Ads · 12 semanas</div>
+  <h1>Mãos no<br><em class="s">gerenciador</em>.</h1>
+  <div class="sub">Um plano de 12 semanas que começa com você sem nenhuma conta criada e termina com você rodando campanha com dinheiro real, lendo o que os números estão dizendo e cobrando por isso. Não é um curso que você assiste. É uma operação que você conduz — comigo dentro dela.</div>
+  <div class="meta">
+    <div><span>Formato</span><strong>Mentoria 1 a 1 · 12 semanas</strong></div>
+    <div><span>Ponto de partida</span><strong>Zero. Sem conta, sem cliente</strong></div>
+    <div><span>Destino</span><strong>Operar sozinho e ser pago</strong></div>
+    <div><span>Conduzido por</span><strong>Felipe Cavalcanti</strong></div>
+  </div>
+  <div class="foot"><span>Plano de Mentoria — Tráfego Pago</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">01 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Antes de tudo</div><div class="num">02</div></div>
+  <h2 class="t">O que este plano assume sobre você.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr">
+      <div class="card">
+        <div class="ct">Ponto de partida</div>
+        <h4>Você está no zero — e isso é uma vantagem</h4>
+        <p>Nunca criou uma conta de anúncio. Nunca subiu campanha. Talvez tenha impulsionado um post pelo botão azul do Instagram e visto o dinheiro sumir.</p>
+        <p><b>Começar do zero é bom:</b> você não tem vício de operação para desaprender. A maior parte do meu trabalho com quem já mexeu é desmontar o que aprendeu errado no YouTube.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Objetivo declarado</div>
+        <h4>Isso precisa virar renda, não hobby</h4>
+        <p>Você não quer "entender de tráfego". Você quer <b>tirar dinheiro disso todo mês</b> — como serviço prestado a negócios que precisam vender.</p>
+        <p>Isso muda o plano inteiro. Metade do conteúdo aqui não é sobre o gerenciador: é sobre <b>como se vende, se precifica e se entrega</b> um serviço de tráfego sem parecer amador.</p>
+      </div>
+      <div class="card">
+        <div class="ct">O acordo</div>
+        <h4>Eu ensino. Quem executa é você</h4>
+        <p>Não existe mentoria que funcione com o mentorado assistindo. Você vai criar as contas, escrever os anúncios, apertar publicar e defender as suas decisões para mim toda semana.</p>
+        <p>Se em alguma semana você não executar, <b>nós não avançamos</b>. Não é punição — é que a semana seguinte depende da anterior estar no ar.</p>
+      </div>
+    </div>
+    <div class="note"><b>Uma ressalva honesta:</b> tráfego pago não é renda passiva e não é rápido. Nas primeiras 4 semanas você vai gastar dinheiro sem ganhar. O plano é construído para que esse gasto seja o menor possível e vire portfólio — não prejuízo.</div>
+  </div>
+  <div class="foot"><span>Premissas</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">02 / 24</div></div>
+<div class="wrap"><section class="slide panel">
+  <div class="s-head"><div class="tag">Roteiro</div><div class="num">03</div></div>
+  <h2 class="t">O que tem neste documento.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="idx gr">
+      <div class="idx-i"><b>I</b><span>Onde você chega em 90 dias</span><i>slide 04</i></div>
+      <div class="idx-i"><b>VI</b><span>Os sete blocos, um a um</span><i>slides 10–16</i></div>
+      <div class="idx-i"><b>II</b><span>Por que não vendi um curso para você</span><i>slides 05–06</i></div>
+      <div class="idx-i"><b>VII</b><span>O cronograma das 12 semanas</span><i>slide 17</i></div>
+      <div class="idx-i"><b>III</b><span>A escada de autonomia</span><i>slide 07</i></div>
+      <div class="idx-i"><b>VIII</b><span>Os ativos que ficam com você</span><i>slides 19–20</i></div>
+      <div class="idx-i"><b>IV</b><span>Como funciona cada semana</span><i>slide 08</i></div>
+      <div class="idx-i"><b>IX</b><span>Regras do jogo e riscos reais</span><i>slides 21–23</i></div>
+      <div class="idx-i"><b>V</b><span>O mapa dos sete blocos</span><i>slide 09</i></div>
+      <div class="idx-i"><b>X</b><span>Investimento e próximo passo</span><i>slide 24</i></div>
+    </div>
+    <div class="note nu2"><b>Como ler este plano:</b> os blocos são sequenciais por dependência técnica, não por preferência. Não dá para otimizar campanha (bloco 5) sem ter evento de conversão instalado (bloco 1). A ordem é a parte mais importante do documento.</div>
+  </div>
+  <div class="foot"><span>Roteiro</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">03 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">O destino</div><div class="num">04</div></div>
+  <h2 class="t">O que você vai <em class="s gd">saber fazer</em> no dia 90.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g2 gr" style="gap:22px">
+      <div class="box ok">
+        <h4>Competência técnica</h4>
+        <ul>
+          <li>Montar um <b>Business Manager do zero</b>: conta de anúncio, página, pixel, API de Conversões, domínio verificado e acessos separados por pessoa.</li>
+          <li>Escolher o <b>objetivo de campanha certo</b> para o modelo de negócio do cliente — e saber explicar por que os outros três estão errados.</li>
+          <li>Construir <b>estrutura de campanha</b> que permite ler resultado: público, orçamento, teste de criativo e nomenclatura padronizada.</li>
+          <li>Ler o gerenciador e <b>identificar em qual etapa o funil está furando</b>: criativo, público, destino ou atendimento.</li>
+          <li><b>Escalar</b> o que funciona sem destruir o custo — e cortar o que não funciona antes de queimar verba.</li>
+        </ul>
+      </div>
+      <div class="box ok">
+        <h4>Competência comercial</h4>
+        <ul>
+          <li>Fazer o <b>cálculo reverso</b> de qualquer negócio: meta de faturamento → vendas → leads → CPL máximo → verba necessária.</li>
+          <li>Dizer <b>quanto cobrar</b> e por quê, com um modelo de cobrança que não te transforma em refém de resultado que você não controla.</li>
+          <li>Montar e enviar uma <b>proposta comercial</b> com escopo, entregas e — principalmente — o que não está incluso.</li>
+          <li>Conduzir uma <b>reunião de resultado</b> com um dono de negócio leigo sem se esconder atrás de métrica bonita.</li>
+          <li>Reconhecer <b>cliente ruim antes de assinar</b>. Este é o que mais mata gestor iniciante.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>O critério objetivo de conclusão</b> não é "assistiu tudo". É o checklist de sete provas do slide 20 — cada uma verificável com print, número e data. Enquanto ele não estiver fechado, a mentoria não terminou.</div>
+  </div>
+  <div class="foot"><span>O destino</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">04 / 24</div></div>
+<div class="wrap"><section class="slide dark">
+  <div class="s-head"><div class="tag">O diferencial</div><div class="num">05</div></div>
+  <h2 class="t">Curso te dá informação.<br>O gerenciador <em class="s gd">cobra decisão</em>.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="lead" style="margin-bottom:14px">Não existe falta de conteúdo sobre Meta Ads. Existe conteúdo demais e operador de menos. A diferença entre os dois formatos não aparece na aula — aparece na terça-feira às 22h, quando o custo por lead triplicou e você precisa decidir o que fazer <strong>agora</strong>.</div>
+    <table class="tight roomy1">
+      <tr><th style="width:31%">A situação real que vai acontecer</th><th style="width:32%">No curso online</th><th>Aqui</th></tr>
+      <tr><td><b>Sua conta é bloqueada no dia 3</b></td><td>Você procura no grupo, acha 40 respostas contraditórias e para uma semana.</td><td>Você me manda o print. Eu já vi esse erro. Resolve no mesmo dia e você aprende a causa.</td></tr>
+      <tr><td><b>O CPL veio a R$ 4 no dia 1 e R$ 19 no dia 4</b></td><td>A aula ensinou "não mexa na fase de aprendizado". Você não sabe se isso se aplica ao seu caso.</td><td>Nós abrimos a conta juntos e decidimos: esperar, cortar ou duplicar — com o critério explicado.</td></tr>
+      <tr><td><b>Chegaram 60 leads e nenhuma venda</b></td><td>Você conclui que o tráfego funcionou e o problema é do cliente. Perde o cliente.</td><td>Você aprende a auditar o atendimento e chegar com diagnóstico, não com desculpa. Isso segura contrato.</td></tr>
+      <tr><td><b>O cliente pede desconto e resultado garantido</b></td><td>Nenhuma aula cobre isso. Você aceita e trabalha de graça por três meses.</td><td>Nós ensaiamos a conversa antes. Você entra na reunião com resposta pronta e piso definido.</td></tr>
+      <tr><td><b>Você trava e some por duas semanas</b></td><td>Ninguém percebe. 3 em cada 100 alunos terminam um curso online.</td><td>Eu percebo na quinta-feira. Tem encontro marcado, missão com prazo e alguém esperando a entrega.</td></tr>
+    </table>
+    <div class="note tight"><b>O ponto:</b> curso é feito para o aluno médio, que não existe. Mentoria é feita para o seu caso, no seu nicho, com a sua verba e o seu primeiro cliente — que é o único caso que vai te pagar.</div>
+  </div>
+  <div class="foot"><span>Curso x Mentoria</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">05 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">O diferencial na prática</div><div class="num">06</div></div>
+  <h2 class="t">Você não vai ver conta de exemplo.<br>Você vai <em class="s gd">operar conta de verdade</em>.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr dense">
+      <div class="card hi">
+        <div class="ct">Sala de cirurgia</div>
+        <h4>Conta real, aberta, ao vivo</h4>
+        <p>Toda semana abrimos uma conta que está gastando dinheiro de verdade — minha ou de cliente com autorização — e eu opero na sua frente narrando cada decisão.</p>
+        <p>Você vê <b>campanha dando errado</b>, não só case de sucesso editado. Errar é o conteúdo mais caro que existe e aqui ele sai de graça.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Mão na massa</div>
+        <h4>Sua conta, sua verba, seu risco controlado</h4>
+        <p>A partir da semana 3 você sobe campanha com dinheiro seu — em valor baixo e deliberado. Sem gastar o próprio dinheiro, ninguém aprende a decidir; a decisão só fica real quando dói um pouco.</p>
+        <p>A diferença é que <b>o erro é revisado antes de ir ao ar</b> enquanto você ainda não tem repertório.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Correção</div>
+        <h4>Auditoria da sua conta, com nota</h4>
+        <p>Toda semana eu entro na sua conta e faço a auditoria em vídeo: o que está certo, o que está errado, o que teria feito diferente e por quê.</p>
+        <p>É o inverso do curso — em vez de você tentar aplicar a aula, <b>a aula sai do seu erro</b>.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Contexto real</div>
+        <h4>Você entra nas minhas reuniões</h4>
+        <p>Em pelo menos duas reuniões de resultado com clientes reais da agência, você assiste como ouvinte: como se apresenta número ruim, como se responde "por que caiu?", como se segura contrato.</p>
+        <p>Nenhum curso te dá isso porque <b>não é gravável</b> — depende de sala, cliente e confiança.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Rede</div>
+        <h4>Meu histórico vira seu atalho</h4>
+        <p>Nicho, oferta, criativo, objeção de cliente: você não parte da estaca zero. Você parte de padrões que já testei com verba de agência em clínicas e negócios locais.</p>
+        <p>Copiar o que já funcionou não é preguiça. <b>É reduzir o custo do seu aprendizado.</b></p>
+      </div>
+      <div class="card amb">
+        <div class="ct">O resumo</div>
+        <h4>Curso entrega aula. Mentoria entrega repertório</h4>
+        <p>Repertório é o que te faz olhar uma conta em 40 segundos e saber onde está o problema.</p>
+        <p>Não se adquire assistindo. Adquire-se <b>decidindo sob pressão, com correção imediata</b> — que é exatamente o desenho destas 12 semanas.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>O diferencial na prática</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">06 / 24</div></div>
+<div class="wrap"><section class="slide panel">
+  <div class="s-head"><div class="tag">A lógica do plano</div><div class="num">07</div></div>
+  <h2 class="t">A escada de autonomia.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="lead" style="margin-bottom:16px">Você não sai de espectador para gestor num salto. Sai em quatro degraus, e <strong>só sobe de degrau quem entrega o do anterior</strong>. É o que garante que "caminhar sozinho" no dia 90 não seja força de expressão.</div>
+    <div class="lad gr" style="align-items:end">
+      <div class="lad-c h1x">
+        <div class="lv">Degrau 01</div>
+        <h4>Sombra</h4>
+        <p>Eu opero, você observa e anota. Você monta a sua estrutura, mas <b>não gasta um real ainda</b>.</p>
+        <div class="du">
+          <div><i>Você faz</i>Monta BM, pixel e planilha de metas.</div>
+          <div><i>Eu faço</i>Opero conta real na sua frente, narrando cada decisão.</div>
+        </div>
+        <div class="wk">Semanas 1–2</div>
+      </div>
+      <div class="lad-c h2x">
+        <div class="lv">Degrau 02</div>
+        <h4>Copiloto</h4>
+        <p>Você monta a campanha inteira e <b>eu reviso antes do publicar</b>. Erro é corrigido antes de custar dinheiro.</p>
+        <div class="du">
+          <div><i>Você faz</i>Sobe campanha e produz os nove criativos, com verba própria baixa.</div>
+          <div><i>Eu faço</i>Reviso cada subida antes do ar e aponto o que quebraria.</div>
+          <div><i>Risco</i>Controlado — nada vai ao ar sem passar por mim.</div>
+        </div>
+        <div class="wk">Semanas 3–6</div>
+      </div>
+      <div class="lad-c h3x">
+        <div class="lv">Degrau 03</div>
+        <h4>Piloto</h4>
+        <p>Você publica sem me consultar e <b>eu audito depois</b>. A decisão passa a ser sua; a responsabilidade também.</p>
+        <div class="du">
+          <div><i>Você faz</i>Corta, escala e escreve o relatório sozinho.</div>
+          <div><i>Eu faço</i>Auditoria semanal em vídeo, com nota e correção.</div>
+          <div><i>Risco</i>Real, mas ainda na sua conta — não na de cliente.</div>
+          <div><i>Marco</i>Primeira decisão de corte defendida com número.</div>
+        </div>
+        <div class="wk">Semanas 7–10</div>
+      </div>
+      <div class="lad-c h4x">
+        <div class="lv">Degrau 04</div>
+        <h4>Solo</h4>
+        <p>Conta de cliente seu, decisão sua, reunião sua. <b>Eu viro consultor de exceção</b> — só entro no que você não resolve.</p>
+        <div class="du">
+          <div><i>Você faz</i>Prospecta, precifica, envia proposta e conduz a reunião.</div>
+          <div><i>Eu faço</i>Ensaio a conversa antes e reviso a proposta depois.</div>
+          <div><i>Risco</i>Seu, com rede de segurança — é para isso que serviram as 10 semanas anteriores.</div>
+          <div><i>Marco</i>Primeiro cliente pagante e plano dos 90 dias seguintes.</div>
+        </div>
+        <div class="wk">Semanas 11–12</div>
+      </div>
+    </div>
+    <div class="note tight"><b>A regra de progressão:</b> quem não fecha as entregas do degrau repete a semana. Prefiro entregar você em 14 semanas sabendo operar do que em 12 com certificado e sem conta rodando.</div>
+  </div>
+  <div class="foot"><span>Escada de autonomia</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">07 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Como funciona</div><div class="num">08</div></div>
+  <h2 class="t">O desenho de uma semana.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="steps gr">
+      <div class="step"><b>1</b><div><h5>Encontro ao vivo — 90 minutos, dia e hora fixos</h5><p>Primeiros 30 min: conceito do bloco da semana. Depois: <b>gerenciador aberto</b> — eu opero, você opera, ou nós dois revisamos o que foi ao ar. Toda sessão é gravada e fica com você.</p></div></div>
+      <div class="step"><b>2</b><div><h5>Missão da semana — enviada no fim do encontro, com prazo</h5><p>Sempre uma entrega concreta e verificável: conta criada, evento disparando, 9 criativos no ar, relatório escrito, proposta enviada. <b>Nunca "estudar o módulo".</b></p></div></div>
+      <div class="step"><b>3</b><div><h5>Execução — 5 a 8 horas suas, distribuídas na semana</h5><p>É aqui que a mentoria acontece de verdade. O encontro é o briefing; a semana é a obra. Sem essas horas, nenhum formato funciona — nem mentoria, nem curso.</p></div></div>
+      <div class="step"><b>4</b><div><h5>Suporte no WhatsApp — resposta em até 24h úteis</h5><p>Para o que trava: conta reprovada, anúncio recusado, dúvida de decisão. Regra: mande <b>print + o que você já tentou</b>. Você não fica parado, e aprende a diagnosticar antes de perguntar.</p></div></div>
+      <div class="step"><b>5</b><div><h5>Auditoria — vídeo de 10 a 15 min na sua conta, antes do próximo encontro</h5><p>Entro na sua conta, gravo a tela, aponto acerto e erro com o motivo. Chegamos ao encontro seguinte <b>com o diagnóstico já feito</b> — não gastamos a sessão descobrindo o problema.</p></div></div>
+    </div>
+    <div class="note"><b>Total de contato direto por semana:</b> ~90 min ao vivo + auditoria gravada + suporte assíncrono. Ao longo de 12 semanas, mais de <b>18 horas de acompanhamento individual</b> sobre a sua operação — não sobre a operação genérica de um aluno hipotético.</div>
+  </div>
+  <div class="foot"><span>Ritual semanal</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">08 / 24</div></div>
+<div class="wrap"><section class="slide dark sec">
+  <div class="st">Parte II · O conteúdo</div>
+  <h2>Sete blocos.<br>Nenhum <em class="s">fora de ordem</em>.</h2>
+  <div class="sl">A sequência não é didática — é técnica. Você não consegue otimizar o que não mede, não consegue medir o que não instalou e não consegue vender o que nunca operou. Cada bloco existe porque o próximo depende dele.</div>
+  <div class="sm2">Fundação · Matemática · Primeira campanha · Criativo · Leitura · Escala · Negócio</div>
+  <div class="foot"><span>Parte II</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">09 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Bloco 1 · Semana 1 · Degrau: Sombra</div><div class="num">10</div></div>
+  <h2 class="t">Fundação: a conta antes do anúncio.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr dense">
+      <div class="card">
+        <div class="ct">Estrutura</div>
+        <h4>Montar o terreno</h4>
+        <ul>
+          <li><b>Business Manager</b> criado no CNPJ certo, com verificação de negócio</li>
+          <li><b>Conta de anúncio</b>, meio de pagamento, limite de gastos e fuso corretos</li>
+          <li><b>Página e Instagram</b> vinculados, com permissões separadas por pessoa</li>
+          <li><b>2FA obrigatório</b> e higiene de acesso — a causa nº 1 de conta perdida</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Medição</div>
+        <h4>Instalar os olhos</h4>
+        <ul>
+          <li><b>Pixel / conjunto de dados</b> instalado e validado no navegador</li>
+          <li><b>API de Conversões</b> — hoje não é opcional, é o que sustenta a otimização</li>
+          <li><b>Domínio verificado</b> e eventos priorizados</li>
+          <li><b>Rastreio de WhatsApp</b> com parâmetros, para saber qual anúncio gerou a conversa</li>
+          <li>Teste de ponta a ponta: <b>clique real, evento chegando</b></li>
+        </ul>
+      </div>
+      <div class="card nu2">
+        <div class="ct">Sobrevivência</div>
+        <h4>Não perder a conta</h4>
+        <ul>
+          <li>Políticas que <b>derrubam conta</b>: saúde, antes e depois, atributos pessoais, promessa de resultado</li>
+          <li><b>Categorias especiais</b> e o que muda na segmentação</li>
+          <li>O que fazer quando o anúncio é <b>recusado</b> — e quando recorrer não adianta</li>
+          <li>Por que <b>nunca</b> operar pela conta pessoal do cliente</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Entrega da semana:</b> uma BM 100% estruturada, com um evento de conversão disparando de verdade e o print da confirmação. Se o evento não chega, nada nas próximas 11 semanas funciona — e a maioria dos gestores iniciantes descobre isso tarde demais.</div>
+  </div>
+  <div class="foot"><span>Bloco 1 — Fundação</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">10 / 24</div></div>
+<div class="wrap"><section class="slide panel">
+  <div class="s-head"><div class="tag">Bloco 2 · Semana 2 · Degrau: Sombra</div><div class="num">11</div></div>
+  <h2 class="t">A matemática vem antes da mídia.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="lead" style="margin-bottom:15px">O gestor amador pergunta "quanto invisto?". O profissional <strong>calcula</strong>. Toda campanha começa numa conta de padaria feita ao contrário — e é essa conta que define se o projeto tem chance antes de você subir qualquer coisa.</div>
+    <div class="g2 gr" style="gap:20px">
+      <div class="box ok">
+        <h4>O cálculo reverso</h4>
+        <ul>
+          <li>Meta de faturamento → <b>ticket médio</b> → nº de vendas necessárias</li>
+          <li>Taxa de fechamento do comercial → <b>nº de leads</b> necessários</li>
+          <li>Verba disponível ÷ leads → <b>CPL máximo aceitável</b></li>
+          <li>CAC teto x margem de contribuição → <b>o negócio suporta mídia paga?</b></li>
+          <li>LTV e recompra → quanto ele <b>pode</b> pagar por cliente, não quanto <b>quer</b></li>
+        </ul>
+      </div>
+      <div class="box no">
+        <h4>Diagnóstico antes do primeiro real</h4>
+        <ul>
+          <li><b>A oferta se sustenta?</b> Preço, promessa e prova batem entre si</li>
+          <li><b>O destino aguenta?</b> Perfil, página ou WhatsApp — quem recebe o clique está pronto</li>
+          <li><b>Tem quem atenda?</b> Lead que espera 6h de resposta é dinheiro queimado</li>
+          <li><b>Tem capacidade de entrega?</b> Vender mais do que se entrega destrói reputação</li>
+          <li><b>Quando dizer não:</b> reconhecer o projeto que vai fracassar independentemente de você</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Entrega da semana:</b> a planilha de metas reversas preenchida para um negócio real — o seu primeiro alvo de cliente. Este é o documento que você vai levar para a primeira reunião comercial na semana 11. <b>Ele vende mais do que qualquer discurso sobre "eu faço tráfego".</b></div>
+  </div>
+  <div class="foot"><span>Bloco 2 — Matemática</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">11 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Bloco 3 · Semanas 3–4 · Degrau: Copiloto</div><div class="num">12</div></div>
+  <h2 class="t">A primeira campanha no ar.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr dense">
+      <div class="card">
+        <div class="ct">Decisão 1</div>
+        <h4>Objetivo de campanha</h4>
+        <ul>
+          <li>Quando usar <b>Cadastro</b>, <b>Mensagens</b>, <b>Vendas</b> ou <b>Reconhecimento</b></li>
+          <li>Por que <b>Tráfego quase nunca</b> é a resposta — e o que ele realmente compra</li>
+          <li>Lead no formulário instantâneo x lead no site: o trade-off entre volume e qualidade</li>
+          <li>O erro clássico: escolher objetivo pelo nome, não pelo evento que otimiza</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Decisão 2</div>
+        <h4>Estrutura e orçamento</h4>
+        <ul>
+          <li><b>CBO x ABO</b>: quando cada um, com verba baixa e com verba alta</li>
+          <li>Estrutura enxuta de partida — poucos conjuntos, <b>sinal concentrado</b></li>
+          <li><b>Fase de aprendizado</b>: quantos eventos, quanto tempo, o que reseta</li>
+          <li>Advantage+ e automações: onde ajudam e onde escondem o problema</li>
+          <li><b>Nomenclatura padronizada</b> — sem ela você não consegue ler a conta em 30 dias</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Decisão 3</div>
+        <h4>Público</h4>
+        <ul>
+          <li>Por que <b>interesse importa menos</b> do que importava — e o que substituiu</li>
+          <li><b>Públicos personalizados</b>: lista, engajamento, visitantes, vídeo</li>
+          <li><b>Lookalike</b>: qual origem, qual percentual, quando ainda não dá para usar</li>
+          <li><b>Exclusões</b>: o que sempre excluir para não pagar duas vezes pela mesma pessoa</li>
+          <li>Retargeting: por que ele <b>não</b> é a primeira campanha da sua vida</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Entrega das duas semanas:</b> campanha publicada, com verba própria, gerando lead ou conversa real. Você revisa comigo antes de publicar — e a partir daqui você tem, oficialmente, uma conta com histórico. <b>Histórico é o ativo que separa você de quem só assistiu aula.</b></div>
+  </div>
+  <div class="foot"><span>Bloco 3 — Primeira campanha</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">12 / 24</div></div>
+<div class="wrap"><section class="slide dark">
+  <div class="s-head"><div class="tag">Bloco 4 · Semanas 5–6 · Degrau: Copiloto</div><div class="num">13</div></div>
+  <h2 class="t">Criativo: onde o resultado <em class="s gd">realmente</em> nasce.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="lead" style="margin-bottom:15px">Segmentação virou commodity — a máquina do Meta acha a pessoa. O que ela não faz é decidir <strong>o que você diz para essa pessoa</strong>. É por isso que hoje o criativo responde pela maior parte da variação de resultado entre duas contas com a mesma verba.</div>
+    <div class="g3 gr dense">
+      <div class="card">
+        <div class="ct">Ângulo</div>
+        <h4>O que você está dizendo</h4>
+        <ul>
+          <li>Dor, desejo, prova, autoridade, objeção, comparação — <b>seis ângulos</b> de partida</li>
+          <li>Consciência do público: quem não sabe que tem o problema não responde a oferta</li>
+          <li>Como extrair ângulo de <b>comentário, review e conversa de WhatsApp</b> em vez de inventar</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Execução</div>
+        <h4>Como você diz</h4>
+        <ul>
+          <li><b>Os 3 primeiros segundos</b>: hook visual e falado, e por que 80% dos vídeos morrem ali</li>
+          <li>Formatos: vídeo curto, UGC, depoimento, estático de texto, carrossel</li>
+          <li>Produção <b>com celular</b> — sem estúdio, sem desculpa</li>
+          <li>Copy do anúncio: primeira linha, quebra de objeção, chamada para ação</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Método</div>
+        <h4>Como você testa</h4>
+        <ul>
+          <li><b>Matriz 3 × 3</b>: três ângulos, três hooks, nove peças no ar</li>
+          <li>Isolar variável — testar duas coisas ao mesmo tempo não ensina nada</li>
+          <li>Quanto tempo e quanto dinheiro <b>por peça</b> antes de julgar</li>
+          <li>Biblioteca de anúncios do concorrente: o que copiar e o que ignorar</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Entrega das duas semanas:</b> nove criativos produzidos por você e rodando, com a matriz de teste documentada. No fim do bloco você vai ter <b>vencedor e perdedor identificados com número</b> — e a experiência, incômoda e necessária, de ver o criativo que você mais gostou perder feio.</div>
+  </div>
+  <div class="foot"><span>Bloco 4 — Criativo</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">13 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Bloco 5 · Semanas 7–8 · Degrau: Piloto</div><div class="num">14</div></div>
+  <h2 class="t">Leitura de dados: parar de olhar o número errado.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="lead" style="margin-bottom:13px">O gerenciador mostra mais de cem métricas e umas seis decidem alguma coisa. Este bloco é a <strong>árvore de diagnóstico</strong>: dado o sintoma, onde está a causa e o que se faz — em vez de mexer em tudo ao mesmo tempo e nunca saber o que funcionou.</div>
+    <table class="tight roomy2">
+      <tr><th style="width:29%">Sintoma na conta</th><th style="width:29%">Onde está a causa</th><th>A decisão correta</th></tr>
+      <tr><td><b>CTR baixo, CPM normal</b></td><td>Criativo ou ângulo. A pessoa certa viu e não se interessou.</td><td>Trocar hook e ângulo. <b>Não</b> mexer em público — é o reflexo errado mais comum.</td></tr>
+      <tr><td><b>CTR bom, custo por lead alto</b></td><td>Destino. Clicou e desistiu na página, no perfil ou na conversa.</td><td>Corrigir página, formulário ou primeira mensagem. A campanha está fazendo a parte dela.</td></tr>
+      <tr><td><b>Lead barato, venda zero</b></td><td>Oferta, qualificação ou comercial. Não é mídia.</td><td>Auditar atendimento e endurecer o filtro do anúncio. Lead ruim barato é o mais caro que existe.</td></tr>
+      <tr><td><b>CPM subindo, frequência acima de ~2,5</b></td><td>Fadiga: o mesmo público vendo a mesma peça vezes demais.</td><td>Rotação de criativo e ampliação de público. Aumentar verba aqui só acelera o desgaste.</td></tr>
+      <tr><td><b>Custo oscilando muito dia a dia</b></td><td>Volume baixo de eventos. Você está lendo ruído como se fosse sinal.</td><td>Parar de mexer, consolidar orçamento e julgar por janela de 3 a 7 dias.</td></tr>
+      <tr><td><b>Tudo caiu de um dia para o outro</b></td><td>Antes de culpar o algoritmo: rastreamento, aprovação, concorrência ou sazonalidade.</td><td>Checar medição primeiro. Metade dos "resultados que sumiram" é evento que parou de chegar.</td></tr>
+    </table>
+    <div class="note tight"><b>Entrega das duas semanas:</b> um relatório semanal escrito por você, com uma decisão de corte ou escala <b>defendida com número</b>. Aqui você deixa de apertar botão e começa a gerir mídia.</div>
+  </div>
+  <div class="foot"><span>Bloco 5 — Leitura de dados</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">14 / 24</div></div>
+<div class="wrap"><section class="slide panel">
+  <div class="s-head"><div class="tag">Bloco 6 · Semanas 9–10 · Degrau: Piloto</div><div class="num">15</div></div>
+  <h2 class="t">Escalar sem quebrar o que funciona.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr dense">
+      <div class="card">
+        <div class="ct">Vertical</div>
+        <h4>Aumentar a verba</h4>
+        <ul>
+          <li>Incrementos controlados e por que o salto brusco <b>reabre o aprendizado</b></li>
+          <li>Quando o custo sobe junto com a verba — e qual é o teto real daquele público</li>
+          <li>Duplicar x aumentar: o que cada caminho custa em histórico</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Horizontal</div>
+        <h4>Abrir novas frentes</h4>
+        <ul>
+          <li>Novos ângulos, novos formatos, novos públicos e novas praças</li>
+          <li>Retargeting e reaquecimento de base — <b>o dinheiro mais barato da conta</b></li>
+          <li>Sequência para quem tocou e não converteu</li>
+        </ul>
+      </div>
+      <div class="card nu2">
+        <div class="ct">Estabilidade</div>
+        <h4>Manter de pé</h4>
+        <ul>
+          <li><b>Esteira de criativo</b>: produzir antes de precisar, não depois de cair</li>
+          <li>Rotina semanal de manutenção de conta em 30 minutos</li>
+          <li>Quando o problema <b>não é mídia</b> — e como provar isso com dado para o cliente</li>
+          <li>Sazonalidade, leilão e datas que mudam o custo sem culpa sua</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Entrega das duas semanas:</b> uma campanha escalada com CPA sob controle e a esteira de criativo montada. Também definimos aqui o <b>seu case de prova</b> — o print, o número e a história que você vai usar para vender o primeiro contrato duas semanas depois.</div>
+  </div>
+  <div class="foot"><span>Bloco 6 — Escala</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">15 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Bloco 7 · Semanas 11–12 · Degrau: Solo</div><div class="num">16</div></div>
+  <h2 class="t">De operador a <em class="s gd">prestador de serviço</em>.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="lead" style="margin-bottom:14px">Saber rodar campanha não paga conta. Existe um número grande de pessoas tecnicamente boas em Meta Ads ganhando muito pouco — porque nunca aprenderam a vender, precificar e proteger o próprio trabalho. Este bloco é sobre isso.</div>
+    <div class="g4 gr dense">
+      <div class="card">
+        <div class="ct">Modelo</div>
+        <h4>Como cobrar</h4>
+        <ul>
+          <li>Fixo mensal, fixo + variável ou percentual de verba</li>
+          <li>Por que <b>percentual de verba pune você</b> no começo</li>
+          <li>Escadinha de preço: primeiro, terceiro e sexto cliente</li>
+          <li>Piso inegociável e política de desconto</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Aquisição</div>
+        <h4>O primeiro cliente</h4>
+        <ul>
+          <li>Círculo próximo e negócio local: onde ele realmente está</li>
+          <li><b>Escolher um nicho</b> — generalista não é contratado</li>
+          <li>Abordagem com diagnóstico, não com "faço tráfego"</li>
+          <li>Prospecção ativa: meta de 3 propostas em 2 semanas</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Proposta</div>
+        <h4>Fechar direito</h4>
+        <ul>
+          <li>Escopo, entregas e prazo por escrito</li>
+          <li><b>O que não está incluso</b> — criativo, site, atendimento</li>
+          <li>Verba de mídia é do cliente e paga por ele. Sempre</li>
+          <li>Acesso por BM do cliente, nunca conta pessoal</li>
+          <li>Nunca prometer resultado; prometer método e ritmo</li>
+        </ul>
+      </div>
+      <div class="card amb">
+        <div class="ct">Entrega</div>
+        <h4>Manter o contrato</h4>
+        <ul>
+          <li>Reunião de resultado: número traduzido para dono de negócio</li>
+          <li>Como apresentar mês ruim <b>sem perder autoridade</b></li>
+          <li>Rotina de relatório e expectativa combinada no dia 1</li>
+          <li>Sinais de cliente que vai dar problema — antes de assinar</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Entrega das duas semanas:</b> três propostas enviadas para negócios reais e ao menos uma reunião comercial conduzida por você — com ensaio comigo antes e revisão depois. <b>A mentoria não termina na campanha. Termina no contrato.</b></div>
+  </div>
+  <div class="foot"><span>Bloco 7 — Negócio</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">16 / 24</div></div>
+<div class="wrap"><section class="slide dark">
+  <div class="s-head"><div class="tag">Cronograma</div><div class="num">17</div></div>
+  <h2 class="t">As 12 semanas, semana a semana.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <table class="tight roomy3">
+      <tr><th style="width:8%">Sem.</th><th style="width:13%">Degrau</th><th style="width:34%">Foco</th><th>Entrega verificável</th></tr>
+      <tr><td class="hd">01</td><td>Sombra</td><td><b>Fundação</b> — BM, conta, página, políticas</td><td>BM estruturada + 2FA + acessos organizados</td></tr>
+      <tr><td class="hd">02</td><td>Sombra</td><td><b>Medição + matemática reversa</b></td><td>Evento disparando (print) + planilha de metas preenchida</td></tr>
+      <tr><td class="hd">03</td><td>Copiloto</td><td><b>Objetivo, estrutura e público</b></td><td>Campanha montada e revisada comigo antes de publicar</td></tr>
+      <tr><td class="hd">04</td><td>Copiloto</td><td><b>Primeira campanha no ar</b> com verba própria</td><td>Primeiro lead ou conversa gerada por anúncio seu</td></tr>
+      <tr><td class="hd">05</td><td>Copiloto</td><td><b>Ângulos e hooks</b> — o que dizer</td><td>Matriz 3 × 3 planejada + 4 peças gravadas</td></tr>
+      <tr><td class="hd">06</td><td>Copiloto</td><td><b>Teste de criativo</b> — como testar</td><td>9 criativos rodando com variável isolada</td></tr>
+      <tr><td class="hd">07</td><td>Piloto</td><td><b>Métricas que decidem</b> + árvore de diagnóstico</td><td>Primeiro relatório semanal escrito</td></tr>
+      <tr><td class="hd">08</td><td>Piloto</td><td><b>Corte e otimização</b> — decidir sozinho</td><td>Uma decisão de corte defendida com número</td></tr>
+      <tr><td class="hd">09</td><td>Piloto</td><td><b>Escala vertical e horizontal</b></td><td>Campanha escalada com CPA sob controle</td></tr>
+      <tr><td class="hd">10</td><td>Piloto</td><td><b>Estabilidade e esteira de criativo</b></td><td>Case de prova documentado (print + número + história)</td></tr>
+      <tr><td class="hd">11</td><td>Solo</td><td><b>Precificação, proposta e prospecção</b></td><td>3 propostas enviadas para negócios reais</td></tr>
+      <tr><td class="hd">12</td><td>Solo</td><td><b>Reunião comercial e de resultado</b></td><td>Reunião conduzida por você + plano dos 90 dias seguintes</td></tr>
+    </table>
+    <div class="note tight"><b>Sobre atraso:</b> semana não entregue é semana repetida. O calendário acima é o caminho rápido — não uma promessa de que ele será cumprido sem a sua execução.</div>
+  </div>
+  <div class="foot"><span>Cronograma</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">17 / 24</div></div>
+<div class="wrap"><section class="slide panel sec">
+  <div class="st">Parte III · O que fica com você</div>
+  <h2>No dia 90 você não<br>sai com <em class="s">certificado</em>.</h2>
+  <div class="sl">Sai com uma conta com histórico, um case com número, um portfólio de criativos, uma proposta comercial testada e um cliente pagando. Certificado não gera receita — e ninguém nunca contratou gestor de tráfego por causa de um.</div>
+  <div class="sm2">Ativos · Provas de formatura · Regras · Riscos</div>
+  <div class="foot"><span>Parte III</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">18 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Ativos</div><div class="num">19</div></div>
+  <h2 class="t">O que fica com você para sempre.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr dense">
+      <div class="card">
+        <div class="ct">Operacional</div>
+        <h4>Sua estrutura viva</h4>
+        <ul>
+          <li>BM e conta de anúncio com <b>histórico e pixel maduro</b></li>
+          <li>Modelo de nomenclatura e estrutura padrão de campanha</li>
+          <li>Checklist de subida de campanha, ponto a ponto</li>
+          <li>Checklist de auditoria de conta de cliente novo</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Analítico</div>
+        <h4>Suas ferramentas de decisão</h4>
+        <ul>
+          <li>Planilha de <b>metas reversas</b> (faturamento → verba)</li>
+          <li>Modelo de <b>relatório semanal</b> para cliente</li>
+          <li>Árvore de diagnóstico impressa — sintoma, causa, decisão</li>
+          <li>Painel de acompanhamento com as métricas que decidem</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Comercial</div>
+        <h4>Seu material de venda</h4>
+        <ul>
+          <li><b>Case de prova</b>: print, número e narrativa da sua própria conta</li>
+          <li>Modelo de <b>proposta comercial</b> com escopo e exclusões</li>
+          <li>Roteiro da reunião de diagnóstico e da reunião de resultado</li>
+          <li>Tabela de preços com piso definido e política de desconto</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Criativo</div>
+        <h4>Seu banco de peças</h4>
+        <ul>
+          <li>Biblioteca dos <b>9 criativos</b> testados, com resultado registrado</li>
+          <li>Estruturas de hook e roteiro reutilizáveis</li>
+          <li>Mapa de ângulos por tipo de negócio</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ct">Registro</div>
+        <h4>Sua memória</h4>
+        <ul>
+          <li><b>Todos os encontros gravados</b>, seus para sempre</li>
+          <li>Todas as auditorias da sua conta em vídeo</li>
+          <li>Histórico de decisões: o que você fez, por que, e no que deu</li>
+        </ul>
+      </div>
+      <div class="card aco">
+        <div class="ct">O ativo real</div>
+        <h4>Critério</h4>
+        <ul>
+          <li>A capacidade de <b>olhar uma conta e saber onde está o problema</b></li>
+          <li>Isso não cabe em PDF, não se copia e não se pirateia</li>
+          <li>É construído decidindo sob correção — semana após semana</li>
+          <li><b>É o único item desta lista que ninguém consegue te tirar</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Ativos</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">19 / 24</div></div>
+<div class="wrap"><section class="slide dark">
+  <div class="s-head"><div class="tag">Critério de conclusão</div><div class="num">20</div></div>
+  <h2 class="t">As sete provas de que você <em class="s gd">caminha sozinho</em>.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="lead" style="margin-bottom:12px">"Terminar a mentoria" não é uma data no calendário. São sete provas objetivas, verificáveis com print, número e testemunha. <strong>Enquanto faltar uma, eu continuo disponível</strong> — porque o compromisso que assumo é com o resultado, não com o cronograma.</div>
+    <div class="steps sq gr" style="gap:7px">
+      <div class="step"><b>1</b><div><h5>Você estruturou uma BM do zero com pixel e API de Conversões validados</h5><p>Sem depender de tutorial, sem me perguntar o passo seguinte.</p></div></div>
+      <div class="step"><b>2</b><div><h5>Você publicou campanha com verba própria e gerou lead dentro do CPL definido antes</h5><p>Definido <b>antes</b> — não justificado depois. É a diferença entre meta e desculpa.</p></div></div>
+      <div class="step"><b>3</b><div><h5>Você diagnosticou e corrigiu uma campanha ruim sem ajuda</h5><p>Identificou a etapa do funil que estava furando e agiu na causa, não no sintoma.</p></div></div>
+      <div class="step"><b>4</b><div><h5>Você escalou uma campanha mantendo o custo de aquisição sob controle</h5><p>Aumentar verba é fácil. Aumentar verba sem estragar o resultado é o serviço.</p></div></div>
+      <div class="step"><b>5</b><div><h5>Você produziu, testou e ranqueou nove criativos com dado</h5><p>E sabe dizer, com número, por que o vencedor venceu.</p></div></div>
+      <div class="step"><b>6</b><div><h5>Você apresentou um relatório de resultado para outra pessoa</h5><p>Cliente, sócio ou eu no papel de cliente difícil. Falar é parte da entrega.</p></div></div>
+      <div class="step"><b>7</b><div><h5>Você enviou três propostas e fechou pelo menos um cliente pagante</h5><p>Esta é a prova que transforma competência em <b>fonte de renda</b> — que é o objetivo declarado no slide 02.</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Provas de conclusão</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">20 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Regras do jogo</div><div class="num">21</div></div>
+  <h2 class="t">O que eu exijo de você.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g2 gr" style="gap:20px">
+      <div class="box ok">
+        <h4>Seus compromissos</h4>
+        <ul>
+          <li><b>5 a 8 horas por semana</b> de execução, fora do encontro. Não negociável — é onde o aprendizado acontece.</li>
+          <li><b>Verba de teste própria</b>, a partir da semana 3. Uma faixa de R$ 20 a R$ 30 por dia já basta para aprender a decidir. Reservar cerca de <b>R$ 1.500 para os 90 dias</b> mantém a operação viva sem apertar seu caixa.</li>
+          <li><b>Presença no encontro semanal</b>, com câmera e gerenciador abertos.</li>
+          <li><b>Missão entregue antes do encontro seguinte.</b> Sem entrega, repetimos a semana.</li>
+          <li><b>Perguntar do jeito certo</b>: print, contexto e o que você já tentou.</li>
+        </ul>
+      </div>
+      <div class="box no">
+        <h4>O que eu não aceito</h4>
+        <ul>
+          <li><b>Prometer resultado a cliente</b> antes da semana 11. Você ainda não tem repertório para sustentar a promessa — e a conta vem para o seu nome.</li>
+          <li><b>Operar pela conta pessoal do cliente</b> ou pedir a senha dele. Isso é risco jurídico e reputacional, não atalho.</li>
+          <li><b>Copiar criativo de concorrente</b> na íntegra. Estudar sim, clonar não.</li>
+          <li><b>Sumir sem avisar.</b> Se a semana apertou, me diga — reprogramamos. O que não existe aqui é desaparecer.</li>
+          <li><b>Terceirizar a execução</b> da missão para outra pessoa. Você está comprando a experiência, não o entregável.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Por que essas regras existem:</b> a mentoria só é melhor que um curso enquanto houver alguém do outro lado executando de verdade. Sem execução, eu viro um curso caro — e aí o formato perde toda a razão de ser.</div>
+  </div>
+  <div class="foot"><span>Regras do jogo</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">21 / 24</div></div>
+<div class="wrap"><section class="slide panel">
+  <div class="s-head"><div class="tag">Honestidade</div><div class="num">22</div></div>
+  <h2 class="t">O que pode dar errado — e o plano para cada caso.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <table class="tight roomy4">
+      <tr><th style="width:30%">Risco real</th><th style="width:15%">Probabilidade</th><th>Como tratamos</th></tr>
+      <tr><td><b>Conta de anúncio bloqueada ou restrita</b></td><td>Alta — acontece com quase todo mundo</td><td>Prevenção no bloco 1 (verificação, 2FA, políticas) + protocolo de recurso pronto. Nunca dependemos de uma única estrutura.</td></tr>
+      <tr><td><b>Anúncio reprovado repetidamente</b></td><td>Alta</td><td>Revisão de copy e imagem à luz das políticas. Boa parte das reprovações é promessa de resultado ou apelo a atributo pessoal — ambas corrigíveis.</td></tr>
+      <tr><td><b>Primeira campanha com custo por lead caro</b></td><td>Alta — é o esperado</td><td>É por isso que a verba inicial é baixa. O objetivo da semana 4 é <b>aprender a ler</b>, não bater meta. Meta só a partir do bloco 5.</td></tr>
+      <tr><td><b>Primeiro cliente é um cliente ruim</b></td><td>Média</td><td>Filtro de qualificação e sinais de alerta no bloco 7. Se aparecer antes, avaliamos juntos — e recusar é uma resposta válida.</td></tr>
+      <tr><td><b>Resultado não vem por culpa do produto ou do atendimento do cliente</b></td><td>Média</td><td>Você aprende a provar isso com dado e a renegociar escopo. Gestor que não sabe separar mídia de comercial leva a culpa de tudo.</td></tr>
+      <tr><td><b>Você não consegue manter o ritmo de execução</b></td><td>Média</td><td>Revisamos o plano na semana 4. Melhor esticar para 16 semanas com entrega real do que fechar 12 no papel.</td></tr>
+      <tr><td><b>Mudança de plataforma no meio do caminho</b></td><td>Certa — o Meta muda sempre</td><td>Por isso o plano ensina critério de decisão, não sequência de cliques. Botão muda; a lógica de leilão, sinal e criativo não.</td></tr>
+    </table>
+    <div class="note tight"><b>Por que eu coloco isso num documento de venda:</b> quem esconde o risco entrega surpresa. Você vai passar por pelo menos três dos itens acima — e a diferença de ter mentoria é que nenhum deles te para por mais de uma semana.</div>
+  </div>
+  <div class="foot"><span>Riscos</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">22 / 24</div></div>
+<div class="wrap"><section class="slide">
+  <div class="s-head"><div class="tag">Escopo</div><div class="num">23</div></div>
+  <h2 class="t">O que <em class="s gd">não</em> está incluído.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr dense">
+      <div class="card">
+        <div class="ct">Não incluso</div>
+        <h4>Verba de mídia</h4>
+        <p>O dinheiro dos anúncios é seu e vai direto para o Meta. Cerca de <b>R$ 1.500 nos 90 dias</b> é uma reserva confortável.</p>
+        <p>Não recebo nada sobre essa verba — e é justamente por isso que posso te dizer para pausar quando for a decisão certa.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Não incluso</div>
+        <h4>Execução por mim</h4>
+        <p>Eu não subo campanha por você, não gravo seu criativo e não atendo seu cliente. Se eu fizer, você não aprende — e no dia 91 você continua dependente.</p>
+        <p><b>Reviso, corrijo e opero na sua frente. Não no seu lugar.</b></p>
+      </div>
+      <div class="card">
+        <div class="ct">Não incluso</div>
+        <h4>Cliente entregue de bandeja</h4>
+        <p>Eu te ensino a prospectar, ensaio a reunião com você e reviso sua proposta. <b>Indicação, quando existir, é bônus e não promessa.</b></p>
+        <p>Gestor que depende de cliente indicado por terceiro não construiu negócio — construiu dependência nova.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Não incluso</div>
+        <h4>Garantia de faturamento</h4>
+        <p>Ninguém sério garante resultado em mídia paga — depende da sua execução, do seu nicho e do mercado.</p>
+        <p>O que eu garanto é <b>método, presença e correção</b>: você não vai ficar travado sozinho em nenhuma semana.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Não incluso</div>
+        <h4>Ferramentas pagas</h4>
+        <p>Nada obrigatório neste plano exige assinatura além do próprio Meta. Onde houver ferramenta útil, indico a alternativa gratuita primeiro.</p>
+      </div>
+      <div class="card hi">
+        <div class="ct">Fora de escopo</div>
+        <h4>Google, TikTok e afins</h4>
+        <p>Este plano é <b>Meta Ads</b> — profundidade em uma plataforma antes de largura em quatro.</p>
+        <p>Quem tenta aprender três canais ao mesmo tempo não fica bom em nenhum e não consegue cobrar por nenhum. Depois do dia 90, conversamos sobre o segundo canal.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Escopo</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">23 / 24</div></div>
+<div class="wrap"><section class="slide dark">
+  <div class="s-head"><div class="tag">Próximo passo</div><div class="num">24</div></div>
+  <h2 class="t">Como começamos.</h2>
+  <div class="rule"></div>
+  <div class="body-wrap">
+    <div class="g3 gr" style="margin-bottom:14px">
+      <div class="stat">
+        <div class="k">Duração</div>
+        <div class="v">12</div>
+        <p><b>semanas</b>, com encontro individual semanal de 90 minutos, auditoria gravada e suporte assíncrono entre eles.</p>
+      </div>
+      <div class="stat">
+        <div class="k">Acompanhamento direto</div>
+        <div class="v">18h+</div>
+        <p>de <b>contato individual</b> sobre a sua conta ao longo do programa — sem contar as auditorias em vídeo.</p>
+      </div>
+      <div class="stat aco">
+        <div class="k">Investimento</div>
+        <div class="v">A definir</div>
+        <p>Fechamos valor e forma de pagamento na conversa. <b>A verba de mídia é à parte</b> e vai direto para o Meta.</p>
+      </div>
+    </div>
+    <div class="steps" style="gap:8px">
+      <div class="step"><b>1</b><div><h5>Conversa de alinhamento — 30 minutos</h5><p>Eu preciso saber sua disponibilidade real de horas, sua reserva de verba e que tipo de negócio você quer atender. Se eu achar que este não é o momento, eu digo.</p></div></div>
+      <div class="step"><b>2</b><div><h5>Definição de nicho-alvo e calendário</h5><p>Escolhemos o dia e a hora fixos do encontro e o nicho do seu primeiro cliente. Nicho definido no dia 1 encurta as semanas 11 e 12 inteiras.</p></div></div>
+      <div class="step"><b>3</b><div><h5>Semana 1 — mãos no gerenciador no primeiro encontro</h5><p>Não existe semana de introdução. No primeiro encontro a sua BM é criada, ao vivo, com você compartilhando a tela.</p></div></div>
+    </div>
+    <div class="note"><b>A frase que resume este documento:</b> curso é onde você aprende o que fazer quando dá certo. Mentoria é ter alguém do lado quando dá errado — e <b>vai dar errado</b>. É exatamente aí que se aprende a operar, e é exatamente aí que um vídeo gravado não pode te ajudar.</div>
+  </div>
+  <div class="foot"><span>Próximo passo</span><span>Felipe Digital · 2026</span></div>
+</section><div class="sn">24 / 24</div></div>
+  </div></div>
+</main>
+
+<footer class="foot-web">
+  <p><b>Mãos no Gerenciador — Plano de Mentoria em Tráfego Pago</b> · preparado por Felipe Cavalcanti, 2026.<br>
+  Documento de trabalho. Para exportar em PDF: imprimir com “gráficos de fundo” ativado.</p>
+  <a class="top" href="#">Voltar ao topo</a>
+</footer>
+
+<script>
+
+(function(){
+  var deck = document.querySelector('.stage');
+  function fit(){
+    if(!deck) return;
+    document.documentElement.style.setProperty('--sc', Math.min(1, deck.clientWidth / 1280));
+  }
+  fit();
+  window.addEventListener('resize', fit, {passive:true});
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  var bar = document.querySelector('.prog');
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if(bar) bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+
+</script>
+</body>
+</html>
